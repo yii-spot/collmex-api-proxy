@@ -7,6 +7,7 @@
         "php": ">=7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "overblog/graphql-bundle": "^0.13.7",
         "symfony/console": "5.4.*",
         "symfony/dotenv": "5.4.*",
         "symfony/flex": "^1.17|^2",
@@ -15,6 +16,7 @@
         "symfony/yaml": "5.4.*"
     },
     "require-dev": {
+        "overblog/graphiql-bundle": "^0.2.1"
     },
     "config": {
         "allow-plugins": {
