@@ -3,8 +3,9 @@ overblog_graphql:
         schema:
             query: Query
         mappings:
+            #auto_discover: false
             types:
                 -
-                    type: graphql
+                    type: yaml
                     dir: "%kernel.project_dir%/config/graphql/types"
                     suffix: null

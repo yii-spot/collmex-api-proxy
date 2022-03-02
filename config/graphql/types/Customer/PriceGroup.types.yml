@@ -1,0 +1,23 @@
+PriceGroup:
+  type: object
+  config:
+    description: 'PriceGroup [Collmex: Preisgruppe]'
+    fields:
+      type_identifier:
+        type: String!
+        description: 'Collmex "1 Satzart"'
+      client:
+        type: Client
+        description: 'Collmex "2: Firma", description: "Interne Firma, wie unter Verwaltung → Firma anzeigen und ändern"'
+      price_group_id:
+        type: Int!
+        description: 'Collmex "3 Nr", max length: 8, description: "Nummer der Preisgruppe"'
+      name:
+        type: String!
+        description: 'Collmex "4 Bezeichnung", max length: 255, desciption: "Bezeichnung der Preisgruppe"'
+      is_gross_price:
+        type: Boolean
+        description: 'Collmex "5 Bruttopreise", max length: 8, description: "0 = Nettopreise, 1 = Bruttopreise"'
+      currency:
+        type: String
+        description: 'Collmex "6 Währung", max length: 3, description: "Währung der Preise dieser Preisgruppe"'

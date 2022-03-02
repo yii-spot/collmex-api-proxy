@@ -1,0 +1,11 @@
+Client:
+  type: object
+  config:
+    description: 'Client [Collmex: Firma]'
+    fields:
+      client_id:
+        type: Int!
+        description: 'Collmex "Firma"'
+      title:
+        type: String!
+        description: 'Collmex "Firma"'

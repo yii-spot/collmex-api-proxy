@@ -1,0 +1,14 @@
+TaxRate:
+  type: object
+  config:
+    description: 'TaxRate [Collmex: Steuerklassifikation]'
+    fields:
+      tax_rate_id:
+        type: Int!
+        description: 'Collmex "Steuerklassifikation"'
+      title:
+        type: String!
+        description: 'Collmex "Steuerklassifikation"'
+      value:
+        type: Int!
+        description: 'Collmex "Steuerklassifikation"'

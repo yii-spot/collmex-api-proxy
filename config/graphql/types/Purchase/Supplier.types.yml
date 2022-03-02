@@ -1,0 +1,11 @@
+Supplier:
+  type: object
+  config:
+    description: 'Supplier [Collmex: Lieferant]'
+    fields:
+      supplier_id:
+        type: Int!
+        description: 'Collmex "Lieferant"'
+      title:
+        type: String!
+        description: 'Collmex "Lieferant"'

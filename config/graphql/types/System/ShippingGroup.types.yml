@@ -1,0 +1,11 @@
+ShippingGroup:
+  type: object
+  config:
+    description: 'ShippingGroup [Collmex: Versandgruppe]'
+    fields:
+      shipping_group_id:
+        type: Int!
+        description: 'Collmex "Versandgruppe"'
+      title:
+        type: String
+        description: 'Collmex "Versandgruppe"'

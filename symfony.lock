@@ -1,4 +1,7 @@
 {
+    "mjaschen/collmex": {
+        "version": "2.1.0"
+    },
     "overblog/graphiql-bundle": {
         "version": "0.2",
         "recipe": {
@@ -122,10 +125,16 @@
     "symfony/http-kernel": {
         "version": "v5.4.4"
     },
+    "symfony/mime": {
+        "version": "v5.4.3"
+    },
     "symfony/options-resolver": {
         "version": "v5.4.3"
     },
     "symfony/polyfill-intl-grapheme": {
+        "version": "v1.24.0"
+    },
+    "symfony/polyfill-intl-idn": {
         "version": "v1.24.0"
     },
     "symfony/polyfill-intl-normalizer": {

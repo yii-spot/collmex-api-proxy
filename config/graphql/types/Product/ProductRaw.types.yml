@@ -1,0 +1,185 @@
+ProductRaw:
+  type: object
+  config:
+    description: 'A Product [Collmex: Produkt]'
+    fields:
+      type_identifier:
+        type: String!
+        description: 'Collmex "1: Satzart"'
+      product_id:
+        type: String!
+        description: 'Collmex "2: Produktnummer", max length: 20, description: "Identifiziert das Produkt eindeutig"'
+      product_description:
+        type: String!
+        description: 'Collmex "3: Bezeichnung", max length: 10.000, description: "Bezeichnung des Produktes"'
+      product_description_eng:
+        type: String
+        description: 'Collmex "4: Bezeichnung Eng", max length: 10.000, description: "Optional. Englische Bezeichnung des Produktes"'
+      quantity_unit:
+        type: String
+        description: 'Collmex "5: Basismengeneinheit", max length: 3, description: "ISO-Codes"'
+      product_group:
+        type: String
+        description: 'Collmex "6: Produktgruppe", max length: 8, description: "Interne Nummer der Produktgruppe, wie im Programm angezeigt unter Produkt → Produktgruppe. Nicht in allen Versionen: Gibt es in der Programmversion keine Produktgruppen, bleibt das Feld leer."'
+      client_id:
+        type: String
+        description: 'Collmex "7: Firma", max length: 8, description: "Interne Nummer der Firma, wie unter Verwaltung → Firma anzeigen und ändern angezeigt"'
+      tax_rate:
+        type: String
+        description: 'Collmex "8: Steuerklassifikation", max length: 8, description: "0 = voller USt, 1 = ermäßigte USt, 2 = keine USt."'
+      weight:
+        type: String
+        description: 'Collmex "9: Gewicht", max length: 18'
+      weight_unit:
+        type: String
+        description: 'Collmex "10: Gewicht Mengeneinheit", max length: 3, description: "ISO-Codes"'
+      price_quantity:
+        type: String
+        description: 'Collmex "11: Preismenge", max length: 18, description: "Preise des Produkts gelten pro Preismenge"'
+      product_type:
+        type: String
+        description: 'Collmex "12: Produktart", max length: 18, description: "0 = Ware, 1 = Dienstleistung, 2 = Mitgliedsbeitrag (nur Collmex Verein), 3 = Bau/Reinigungs-Dienstleistung, 4 - Ware-Kunde schuldet Ust., 5 = Elektronisch erbrachte Leistung"'
+      inactive:
+        type: String
+        description: 'Collmex "13: Inaktiv", max length: 18, description: "0 = Produkt ist aktiv, 1 = Produkt ist inaktiv, 2 = Produkt löschen, 3 = Produkt löschen, sofern nicht verwendet, andernfalls unverändert lassen."'
+      price_group:
+        type: String
+        description: 'Collmex "14: Preisgruppe", max length: 18, description: "Optional. Interne Nummer der Preisgruppe. Wird nur verwendet, wenn der Verkaufs-Preis im Feld ''Verkaufs-Preis'' gesetzt ist."'
+      price:
+        type: String
+        description: 'Collmex "15: Verkaufs-Preis", max length: 18, description: "Optional. Wenn belegt, der zum Import-Datum gültige Preis, der im vorigen Feld angegebenen Preisgruppe."'
+      ean:
+        type: String
+        description: 'Collmex "16: EAN", max length: 20, description: "Optional. EAN Code des Produkts"'
+      manufacturer:
+        type: String
+        description: 'Collmex "17: Hersteller", max length: 40, description: "Optional. Hersteller des Produkts"'
+      shipping_group:
+        type: String
+        description: 'Collmex "18: Versandgruppe", max length: 18, description: "Optional. Interne Nummer der Versandgruppe."'
+      minimum_quantity:
+        type: String
+        description: 'Collmex "19: Mindestbestand", max length: 18'
+      quantity:
+        type: String
+        description: 'Collmex "20: Bestellmenge", max length: 18'
+      lot_mandatory:
+        type: String
+        description: 'Collmex "21: Chargenpflicht", max length: 8, description: "1 = Produkt ist chargenpflichtig"'
+      procurement:
+        type: String
+        description: 'Collmex "22: Chargenpflicht", max length: 8, description: "0 oder nicht gesetzt = Einkauf, 10 = Produktion"'
+      production_time:
+        type: String
+        description: 'Collmex "23: Produktionsdauer", max length: 8"'
+      labor_costs:
+        type: String
+        description: 'Collmex "24: Lohnkosten", max length: 18"'
+      labor_costs_reference_amount:
+        type: String
+        description: 'Collmex "25: Lohnkosten-Bezugsmenge", max length: 18"'
+      annotation:
+        type: String
+        description: 'Collmex "26: Bemerkung", max length: 1024"'
+      costing:
+        type: String
+        description: 'Collmex "27: Kostenermittlung", max length: 8, description: "0 = Automatisch, 10 = Manuell"'
+      costs:
+        type: String
+        description: 'Collmex "28: Kosten", max length: 18, description: "Produktkosten. Beim Import wird dieses Feld nur berücksichtigt, wenn die Kostenermittlung im Feld ''Kostenermittlung'' auf ''Manuell'' gestellt ist."'
+      reference_amount_cost:
+        type: String
+        description: 'Collmex "29: Bezugsmenge-Kosten", max length: 18, description: "Bezugsmenge für die Kosten. Beim Import wird dieses Feld nur berücksichtigt, wenn die Kostenermittlung auf ''Manuell'' gestellt ist."'
+      purchase_supplier:
+        type: String
+        description: 'Collmex "30: EK-Lieferant", max length: 8, description: "Optional. Wenn belegt, wird mit den Daten aus den Feldern 31-41 eine Lieferantenvereinbarung angelegt bzw. geändert."'
+      purchase_tax_rate:
+        type: String
+        description: 'Collmex "31: EK-Steuerklassifikation", max length: 8, description: "0 = voller USt, 1 = ermäßigte USt., 2 = keine USt."'
+      product_number_supplier:
+        type: String
+        description: 'Collmex "32: EK-ProdNr d.Lieferanten", max length: 20, description: "Produktnummer des Lieferanten"'
+      purchase_quantity_per_package:
+        type: String
+        description: 'Collmex "33: EK-Verpackungseinheit", max length: 18, description: "Menge, die in einer Verpackung enthalten ist."'
+      purchase_description:
+        type: String
+        description: 'Collmex "34: EK-ProdNr d.Lieferanten", max length: 10.000, description: "Produktnummer des Lieferanten"'
+      purchase_price:
+        type: String
+        description: 'Collmex "35: EK-Preis", max length: 18, description: "Einkaufspreis"'
+      purchase_price_quantity:
+        type: String
+        description: 'Collmex "36: EK-Preismenge", max length: 18, description: "Einkaufspreise des Produkts gelten pro Preismenge"'
+      purchase_delivery_time:
+        type: String
+        description: 'Collmex "37: EK-Lieferzeit", max length: 18'
+      purchase_currency:
+        type: String
+        description: 'Collmex "38: EK-Währung", max length: 3, description: "Nur für Export: Währung des Lieferanten"'
+      website_id:
+        type: String
+        description: 'Collmex "41: Webauftritt-Nr", max length: 8, description: "Optional. Interne Nummer des Webauftritts, wie sie im Webauftritt angezeigt wird. Wenn belegt, werden mit den Daten aus den Feldern 42-55 die Shop-Daten für den angegebenen Webauftritt gesetzt. Sollen Produkte in mehreren Webauftritten verwendet werden, importieren Sie die Produkte für jeden Webauftritt extra."'
+      shop_short_text:
+        type: String
+        description: 'Collmex "42: Shop-Kurztext", max length: 255'
+      shop_long_text:
+        type: String
+        description: 'Collmex "43: Shop-Langtext", max length: -'
+      text_type:
+        type: String
+        description: 'Collmex "44: Texte-Sind-HTML", max length: 8, description: "1 = Texte sind im HTML-Format"'
+      filename:
+        type: String
+        description: 'Collmex "45: Dateiname", max length: 80'
+      keywords:
+        type: String
+        description: 'Collmex "46: Keywords", max length: 255'
+      title:
+        type: String
+        description: 'Collmex "47: Titel", max length: 255'
+      template_id:
+        type: String
+        description: 'Collmex "48: Abweichendes Template Nr", max length: 8'
+      image_url:
+        type: String
+        description: 'Collmex "49: Bild-URL", max length: 255'
+      base_price_quantity_product:
+        type: String
+        description: 'Collmex "50: Grundpreis-Menge-1", max length: 18, description: "Menge für die Grundpreisberechnung in der Mengeneinheit des Produkts"'
+      base_price_quantity_base_unit:
+        type: String
+        description: 'Collmex "51: Grundpreis-Menge-2", max length: 18, description: "Menge für die Grundpreisberechnung in der Grund-Mengeneinheit"'
+      base_unit:
+        type: String
+        description: 'Collmex "52: Grund-Mengeneinheit", max length: 8, description: "0 = Keine, 1 = Kilogramm, 2 = Liter, 3 = Kubikmeter, 4 = Meter, 5 = Quadratmeter, 6 = Stück"'
+      requested_price:
+        type: String
+        description: 'Collmex "53: Preis auf Anfrage", max length: 8'
+      inactive_alt:
+        type: String
+        description: 'Collmex "54: Inaktiv", max length: 8, description: "0 = Produkt ist aktiv, 1 = Produkt ist inaktiv"'
+      shop_category_ids:
+        type: String
+        description: 'Collmex "55: Shop-Kategorien", max length: 8, description: "interne Nummer der Kategorie, wie sie im Webauftritt in der Kategorie angezeigt wird. Soll das Produkt mehreren Kategorien zugeordnet werden, sind diese jeweils durch ein Komma zu trennen (z.B. 1,2,3). Der Wert ''0'' entfernt das Produkt aus allen Kategorien. Wird nichts angegeben, bleibt die Zuordnung des Produkts zu den Kategorien unverändert."'
+      product_number_manufacturer:
+        type: String
+        description: 'Collmex "59: ProduktNr des Herstellers", max length: 40, description: "Optional. Die Produktnummer des Hersteller für das Produkt"'
+      delivery_relevant:
+        type: String
+        description: 'Collmex "60: Lieferrelevant", max length: 8, description: "Nur für Dienstleistungen. 0 = Nicht Lieferrelevant, 1 = Lieferrelevant"'
+      amazon_asin:
+        type: String
+        description: 'Collmex "61: Amazon-ASIN", max length: 40, description: "Nur für Export: Die Amazon-ASIN, wenn das Produkt bei Amazon gelistet ist."'
+      ebay_item_number:
+        type: String
+        description: 'Collmex "62: eBay-Artikelnummer", max length: 40, description: "Nur für Export: Die eBay-Artikelnummer, wenn das Produkt bei eBay gelistet ist."'
+      direct_delivery:
+        type: String
+        description: 'Collmex "63: Direktlieferung", max length: 8, description: "0 = Keine Direktlieferung vom Lieferant zum Kunden, 1 = Direktlieferung vom Lieferant zum Kunden"'
+      hs_code:
+        type: String
+        description: 'Collmex "64: Warennummer", max length: 40, description: "International genormte Warennummer (auch Zolltarifnummer, HS-Code genannt)."'
+      storage_bin:
+        type: String
+        description: 'Collmex "65: Lagerplatz", max length: 40'
