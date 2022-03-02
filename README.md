@@ -21,7 +21,7 @@ This Symfony Flex "API-only" app provides GraphQL access to the [Collmex API](ht
 This project is in a very early stage of development and is therefore not yet suitable for productive use!
 
 Currently there
-- are NO access restrictions to objects ord object fields
+- are NO access restrictions to objects or object fields
 - is NOT any kind of authentication, so ONLY run locally or behind a firewall
 - are NO automated tests
 
