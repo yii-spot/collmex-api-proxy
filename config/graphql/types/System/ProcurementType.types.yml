@@ -1,0 +1,11 @@
+ProcurementType:
+  type: object
+  config:
+    description: 'ProcurementType [Collmex: Beschaffungsart]'
+    fields:
+      procurement_type_id:
+        type: Int!
+        description: 'Collmex "Beschaffungsart"'
+      title:
+        type: String!
+        description: 'Collmex "Beschaffungsart"'

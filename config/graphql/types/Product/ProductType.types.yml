@@ -1,0 +1,11 @@
+ProductType:
+  type: object
+  config:
+    description: 'ProductType [Collmex: Produktart]'
+    fields:
+      product_type_id:
+        type: Int!
+        description: 'Collmex "Produktart"'
+      title:
+        type: String!
+        description: 'Collmex "Produktart"'

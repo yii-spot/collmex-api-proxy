@@ -1,0 +1,11 @@
+CostingType:
+  type: object
+  config:
+    description: 'CostingType [Collmex: Kostenermittlung]'
+    fields:
+      costing_type_id:
+        type: Int!
+        description: 'Collmex "Kostenermittlung"'
+      title:
+        type: String!
+        description: 'Collmex "Kostenermittlung"'

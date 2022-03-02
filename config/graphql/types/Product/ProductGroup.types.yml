@@ -1,0 +1,17 @@
+ProductGroup:
+  type: object
+  config:
+    description: 'ProductGroup [Collmex: Produktgruppe]'
+    fields:
+      type_identifier:
+        type: String!
+        description: 'Collmex "1: Satzart"'
+      product_group_id:
+        type: Int!
+        description: 'Collmex "2: Produktgruppe Nr", max length: 8, description: "Nummer der Produktgruppe, wie im Programm angezeigt unter Produkt → Produktgruppe. Die Produktgruppen Nr identifiziert die Produktgruppe eindeutig. Falls nicht angegeben, wird eine neue Nummer vergeben."'
+      title:
+        type: String!
+        description: 'Collmex "3: Bezeichnung", max length: 8, description: "Bezeichnung der Produktgruppe"'
+      parent:
+        type: ProductGroup
+        description: 'Collmex "4: Bezeichnung", max length: 8, description: "Nummer der übergeordneten Produktgruppe"'

@@ -1,0 +1,28 @@
+Query:
+  type: object
+  config:
+    description: 'Collmex API repository'
+    fields:
+#      products:
+#        type: '[Product]'
+#        resolve: "@=resolver('Products')"
+      product:
+        type: "Product"
+        args:
+          client_id:
+            description: Client ID
+            type: Int
+          product_id:
+            description: SKU
+            type: String!
+        resolve: "@=resolver('Product', [args['client_id'], args['product_id']])"
+      product_raw:
+        type: "ProductRaw"
+        args:
+          client_id:
+            description: Client ID
+            type: Int
+          product_id:
+            description: SKU
+            type: String!
+        resolve: "@=resolver('ProductRaw', [args['client_id'], args['product_id']])"
