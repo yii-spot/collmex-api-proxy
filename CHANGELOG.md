@@ -8,6 +8,10 @@ See [ROADMAP.md](ROADMAP.md) for roadmap and release planning.
 
 ## [Unreleased]
 
+## [0.2.1] - 2022-03-19
+### Changed
+- Added information on new type "Delivery" to README.md 
+
 ## [0.2.0] - 2022-03-19
 ### Added
 - GraphQL schema and resolver for Collmex type "Delivery" ("Lieferung")
