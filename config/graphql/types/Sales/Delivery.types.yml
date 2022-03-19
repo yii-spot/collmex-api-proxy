@@ -1,0 +1,194 @@
+Delivery:
+  type: object
+  config:
+    description: 'A Sales Delivery [Collmex: Lieferung], https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_lieferungen'
+    fields:
+      type_identifier:
+        type: String!
+        description: 'Collmex "1: Satzart"'
+      delivery_id:
+        type: Int!
+        description: 'Collmex "2: Lieferungsnummer", max length: 8, description: "Die Lieferungsnummer identifiziert die Lieferung eindeutig. Siehe auch Nummernvergabe."'
+      kind_of_delivery:
+        type: Int!
+        description: 'Collmex "4: Lieferungsart", max length: 8, description: "0 = Normale Lieferung, 1 = Zusatzlieferung. Nur für Export und Neuanlage. Die Lieferungsart einer bestehenden Lieferung kann nicht geändert werden."'
+      client:
+        type: Client!
+        description: 'Collmex "5: Firma Nr", max length: 8, description: "Interne Nummer der Firma, wie unter Verwaltung → Firma anzeigen und ändern angezeigt."'
+      customer_id:
+        type: Int!
+        description: 'Collmex "6: Kunden-Nr", max length: 8, description: "Der Kunde muss in Collmex existieren."'
+      order_id:
+        type: Int
+        description: 'Collmex "7: Auftrag Nr", max length: 8, description: "Nummer des Kundenauftrags, auf den sich die Lieferung bezieht."'
+      customer_salutation:
+        type: String
+        description: 'Collmex "8: Kunde-Anrede", max length: 10, description: "Nur für Export: Felder 8 - 28 ist die Kundenadresse."'
+      customer_title:
+        type: String
+        description: 'Collmex "9: Kunde-Titel", max length: 10'
+      customer_firstname:
+        type: String
+        description: 'Collmex "10: Kunde-Vorname", max length: 40'
+      customer_lastname:
+        type: String
+        description: 'Collmex "11: Kunde-Name", max length: 40'
+      customer_company:
+        type: String
+        description: 'Collmex "12: Kunde-Firma", max length: 80'
+      customer_department:
+        type: String
+        description: 'Collmex "13: Kunde-Abteilung", max length: 80'
+      customer_street:
+        type: String
+        description: 'Collmex "14: Kunde-Strasse", max length: 80'
+      customer_zip:
+        type: String
+        description: 'Collmex "15: Kunde-PLZ", max length: 10'
+      customer_city:
+        type: String
+        description: 'Collmex "16: Kunde-Ort", max length: 20'
+      customer_country:
+        type: String
+        description: 'Collmex "17: Kunde-Land", max length: 2, description: "ISO Codes"'
+      customer_tel:
+        type: String
+        description: 'Collmex "18: Kunde-Telefon", max length: 20'
+      customer_tel2:
+        type: String
+        description: 'Collmex "19: Kunde-Telefon2", max length: 20'
+      customer_telefax:
+        type: String
+        description: 'Collmex "20: Kunde-Telefax", max length: 20'
+      customer_email:
+        type: String
+        description: 'Collmex "21: Kunde-E-Mail", max length: 50'
+      customer_account_number:
+        type: String
+        description: 'Collmex "22: Kunde-Kontonummer", max length: 20'
+      customer_bank_routing_number:
+        type: String
+        description: 'Collmex "23: Kunde-Blz ", max length: 20"'
+      customer_different_dipositor:
+        type: String
+        description: 'Collmex "24: Kunde-Abweichender Kontoinhaber", max length: 40"'
+      customer_IBAN:
+        type: String
+        description: 'Collmex "25: Kunde-IBAN", max length: 20"'
+      customer_BIC:
+        type: String
+        description: 'Collmex "26: Kunde-BIC", max length: 20"'
+      customer_bank:
+        type: String
+        description: 'Collmex "27: Kunde-Bank", max length: 20'
+      customer_business_tax_id:
+        type: String
+        description: 'Collmex "28: Kunde-USt.IdNr", max length: 20'
+      customer_private_person:
+        type: Boolean
+        description: 'Collmex "29: Kunde-Privatperson", max length: 8'
+      order_id_at_customer:
+        type: String
+        description: 'Collmex "30: Auftragsnummer bei Kunde", max length: 20, description: "Nur für Export"'
+      delivery_date:
+        type: String
+        description: 'Collmex "31: Lieferungsdatum", max length: 8"'
+      delivery_note:
+        type: String
+        description: 'Collmex "32: Lieferungstext", max length: 1024'
+      closing_note:
+        type: String
+        description: 'Collmex "33: Schlusstext", max length: 1024'
+      internal_note:
+        type: String
+        description: 'Collmex "34: Internes Memo", max length: 1024'
+      deleted:
+        type: Boolean
+        description: 'Collmex "35: Gelöscht", max length: 8, description: "0 = nicht gelöscht, 1 = gelöscht. "'
+      completed:
+        type: Boolean
+        description: 'Collmex "36: Erledigt", max length: 8, description: "0 = nicht erledigt, 1 = erledigt."'
+      status:
+        type: String
+        description: 'Collmex "37: Status", max length: 8, description: "Nur für Export: 0 = Neu, 10 = Offen, 20 = Erledigt, 30 = Gelöscht, 40 = Versandübergabe erforderlich, 50 = Versandübergabe erfolgt"'
+      lang:
+        type: Int
+        description: 'Collmex "38: Sprache", max length: 8, description: "0 = Deutsch, 1 = Englisch."'
+      issuer_id:
+        type: Int
+        description: 'Collmex "39: Bearbeiter", max length: 8, description: "Mitarbeiternummer des Bearbeiters."'
+      weight:
+        type: Float
+        description: 'Collmex "40: Gewicht", max length: 18, description: "Nur für Export: Gewicht in kg"'
+      amount_to_be_collected:
+        type: Float
+        description: 'Collmex "41: Nachnahme-Betrag", max length: 18, description: "Falls mit der Lieferung ein Kundenauftrag und eine Rechnung der Zahlungsbedinung ''Nachnahme'' verknüpft ist, der Betrag der Rechnung."'
+      currency:
+        type: String
+        description: 'Collmex "42: Nachnahme-Währung", max length: 3, description: "Währung der Nachnahme-Rechnung."'
+      tracking_code:
+        type: String
+        description: 'Collmex "43: Sendungsnummer", max length: 20'
+      mode_of_shipment:
+        type: String
+        description: 'Collmex "44: Versandart", max length: 8, description: "Interne Nummer der Versandart, wie sie bei der Pflege der Versandart angezeigt wird."'
+      delivery_specifications:
+        type: String
+        description: 'Collmex "45: Lieferbedingung", max length: 3, description: "International genormte INCOTERMS. Falls nicht angegeben, wird die Lieferbedingung aus der Versandart übernommen."'
+      delivery_additions:
+        type: String
+        description: 'Collmex "46: Lieferbedingung Zusatz", max length: 40, description: "Ort der Lieferbedingung"'
+      delivery_address_salutation:
+        type: String
+        description: 'Collmex "47: LieferAdr-Anrede", max length: 10, description: "Felder 47 - 60: Abweichende Lieferadresse."'
+      delivery_address_title:
+        type: String
+        description: 'Collmex "48: LieferAdr-Titel", max length: 10'
+      delivery_address_firstname:
+        type: String
+        description: 'Collmex "49: LieferAdr-Vorname", max length: 40'
+      delivery_address_lastname:
+        type: String
+        description: 'Collmex "50: LieferAdr-Name", max length: 40'
+      delivery_address_company:
+        type: String
+        description: 'Collmex "51: LieferAdr-Firma", max length: 80'
+      delivery_address_department:
+        type: String
+        description: 'Collmex "52: LieferAdr-Abteilung", max length: 80'
+      delivery_address_street:
+        type: String
+        description: 'Collmex "53: LieferAdr-Strasse", max length: 80'
+      delivery_address_zip:
+        type: String
+        description: 'Collmex "54: LieferAdr-PLZ", max length: 10'
+      delivery_address_city:
+        type: String
+        description: 'Collmex "55: LieferAdr-Ort", max length: 20'
+      delivery_address_country:
+        type: String
+        description: 'Collmex "56: LieferAdr-Land", max length: 2, description: "ISO Codes"'
+      delivery_address_tel:
+        type: String
+        description: 'Collmex "57: LieferAdr-Telefon", max length: 20'
+      delivery_address_tel2:
+        type: String
+        description: 'Collmex "58: LieferAdr-Telefon2", max length: 20'
+      delivery_address_telefax:
+        type: String
+        description: 'Collmex "59: LieferAdr-Telefax", max length: 20'
+      delivery_address_email:
+        type: String
+        description: 'Collmex "60: LieferAdr-E-Mail", max length: 50'
+      handover_required:
+        type: Int
+        description: 'Collmex "68: Versandübergabe erforderlich", max length: 8'
+      last_handover:
+        type: String
+        description: 'Collmex "69: Zuletzt übergeben am", max length: 8'
+      delivery_items:
+        type: "[DeliveryItem]"
+        description: 'Assigned delivery items by delivery position'
+      delivery_raw_data:
+        type: "[DeliveryRaw]"
+        description: 'Raw Delivery response data'

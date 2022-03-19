@@ -1,0 +1,29 @@
+DeliveryItem:
+  type: object
+  config:
+    description: 'A Sales Delivery Item [Collmex: Lieferung Position], https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_lieferungen'
+    fields:
+      position:
+        type: Int!
+        description: 'Collmex "3: Position", max length: 8, description: "Positionsnummer der Lieferungsposition."'
+      position_type:
+        type: Int!
+        description: 'Collmex "61: Positionstyp", max length: 8, description: "0 = Normalposition, 2 = Textposition."'
+      product_id:
+        type: String
+        description: 'Collmex "62: Produktnummer", max length: 20'
+      product_description:
+        type: String
+        description: 'Collmex "63: Produktbeschreibung", max length: 10000'
+      unit:
+        type: String
+        description: 'Collmex "64: Mengeneinheit", max length: 3, description: "ISO Codes."'
+      quantity:
+        type: Float
+        description: 'Collmex "65: Menge", max length: 18'
+      customer_order_position:
+        type: Int
+        description: 'Collmex "66: Kundenauftragsposition", max length: 8'
+      ean:
+        type: String
+        description: 'Collmex "67: EAN", max length: 13'

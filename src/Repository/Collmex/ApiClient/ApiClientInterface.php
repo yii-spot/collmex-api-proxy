@@ -6,6 +6,8 @@ use MarcusJaschen\Collmex\Client\ClientInterface as CollmexClientInterface;
 
 interface ApiClientInterface
 {
+    public const DEFAULT_COMPANY_CLIENT_ID = 1;
+
     /**
      * @return ApiClientConfigInterface|null
      */

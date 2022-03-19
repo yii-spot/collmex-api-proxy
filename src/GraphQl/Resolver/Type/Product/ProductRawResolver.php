@@ -24,15 +24,15 @@ class ProductRawResolver implements ResolverInterface, AliasedInterface
 
     /**
      * @param int $clientId
-     * @param string $product_id
+     * @param string $productId
      * @return array
      * @throws \MarcusJaschen\Collmex\Client\Exception\RequestFailedException
      * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
      * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
-    public function fetchProduct(int $clientId, string $product_id): array
+    public function fetchProduct(int $clientId, string $productId): array
     {
-        return $this->productRepository->getProductRaw($clientId, $product_id);
+        return $this->productRepository->getProductRaw($clientId, $productId);
     }
 
     /**

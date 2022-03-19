@@ -77,6 +77,8 @@ Append `/graphiql` to your app URL in order to open the GraphiQL UI.
 We recommend using the Chrome plugin of [Altair's GraphQL client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
 
 ## Roadmap & Vision
+See [ROADMAP.md](ROADMAP.md) for roadmap and release planning.
+
 - Further Collmex API types
 - GraphQL Mutation (Create / Update) 
 - Nested GraphQL resolvers
@@ -88,3 +90,14 @@ Please use dicussions and issues for suggestions!
 ## Collmex API Documentation
 
 <https://www.collmex.de/cgi-bin/cgi.exe?1005,1,help,api>
+
+## Development notes
+
+### New data type
+- Create GraphQL schema definition for raw Collmex data in config/graphql/types/
+- Create GraphQL schema with sub data types in config/graphql/types/
+- Add schema definitions to config/graphql/Query.types.yml
+- Add data type request in src/Repository/Collmex/ApiClient/Type/
+- Add data type entity in src/Entity/Type/
+- Add data type repository in src/Repository/Type/
+- Add GraphQL resolvers in src/GraphQl/Resolver/Type/

@@ -3,9 +3,29 @@ Query:
   config:
     description: 'Collmex API repository'
     fields:
-#      products:
-#        type: '[Product]'
-#        resolve: "@=resolver('Products')"
+      delivery:
+        type: "Delivery"
+        args:
+          client_id:
+            description: Client ID
+            type: Int
+          delivery_id:
+            description: Delivery ID
+            type: Int!
+        resolve: "@=resolver('Delivery', [args['client_id'], args['delivery_id']])"
+      delivery_raw:
+        type: "[DeliveryRaw]"
+        args:
+          client_id:
+            description: Client ID
+            type: Int
+          delivery_id:
+            description: Delivery ID
+            type: Int!
+        resolve: "@=resolver('DeliveryRaw', [args['client_id'], args['delivery_id']])"
+      #      products:
+      #        type: '[Product]'
+      #        resolve: "@=resolver('Products')"
       product:
         type: "Product"
         args:

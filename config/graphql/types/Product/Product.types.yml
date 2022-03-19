@@ -1,7 +1,7 @@
 Product:
   type: object
   config:
-    description: 'Product [Collmex: Produkt]'
+    description: 'Product [Collmex: Produkt], https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_produkt'
     fields:
       type_identifier:
         type: String!
@@ -22,7 +22,7 @@ Product:
         type: ProductGroup
         description: 'Collmex "6: Produktgruppe", description: "Produktgruppe, wie im Programm angezeigt unter Produkt → Produktgruppe. Nicht in allen Versionen: Gibt es in der Programmversion keine Produktgruppen, bleibt das Feld leer."'
       client:
-        type: Client
+        type: Client!
         description: 'Collmex "7: Firma", description: "Firma, wie unter Verwaltung → Firma anzeigen und ändern angezeigt"'
       tax_rate:
         type: TaxRate
