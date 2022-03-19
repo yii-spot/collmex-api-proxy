@@ -36,6 +36,10 @@ GraphQL representation of the Collmex type "Lieferung" with the following nested
 - Client (Collmex "Firma")
 - DeliveryItem (Subtype for delivery position data)
 
+##### Parameters
+- client_id (Collmex "Firma Nr")
+- delivery_id (Collmex "Lieferungsnummer")
+
 #### Type "Product"
 GraphQL representation of the Collmex type "Produkt" with the following nested object types:
 - ProductGroup (Collmex "Produktgruppe")
