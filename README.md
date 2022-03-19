@@ -29,6 +29,11 @@ Currently there
 
 ### Query
 
+#### Type "Delivery"
+GraphQL representation of the Collmex Type "Lieferung" with the following nested object types:
+- Client (Collmex "Firma")
+- DeliveryItem (Subtype for delivery position data)
+
 #### Type "Product"
 GraphQL representation of the Collmex Type "Produkt" with the following nested object types:
 - ProductGroup (Collmex "Produktgruppe")
