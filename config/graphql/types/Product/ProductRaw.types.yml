@@ -1,7 +1,7 @@
 ProductRaw:
   type: object
   config:
-    description: 'A Product [Collmex: Produkt]'
+    description: 'A Product [Collmex: Produkt], https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_produkt'
     fields:
       type_identifier:
         type: String!

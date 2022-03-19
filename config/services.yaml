@@ -23,6 +23,12 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Repository\Collmex\ApiClient\BaseRequest\BaseRequestInterface:
+        factory: ['App\Repository\Collmex\ApiClient\BaseRequest\BaseRequestFactoryInterface', 'createBaseRequest'];
+
+    App\Repository\Collmex\ApiClient\Type\Sales\Delivery\DeliveryRequestInterface:
+        factory: [ 'App\Repository\Collmex\ApiClient\BaseRequest\BaseRequestFactoryInterface', 'createBaseRequest' ];
+
     App\Repository\Collmex\ApiClient\ApiClientConfig:
         arguments:
             $customerId: '%collmex.api.customer_id%'
