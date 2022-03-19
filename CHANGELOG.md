@@ -13,7 +13,7 @@ See [ROADMAP.md](ROADMAP.md) for roadmap and release planning.
 - GraphQL schema and resolver for Collmex type "Delivery" ("Lieferung")
 - ROADMAP.md
 - DateTimeConverter for Collmex date string
-- Development notest for new types in README.md
+- Development notes for new types in README.md
 
 ## [0.1.0] - 2022-03-01
 ### Added
