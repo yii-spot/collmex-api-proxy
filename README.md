@@ -3,19 +3,20 @@
 This Symfony Flex "API-only" app provides GraphQL access to the [Collmex API](https://www.collmex.de/cgi-bin/cgi.exe?1005,1,help,api).
 
 ## Table of Contents
-- [API proxy for Collmex with GraphQL support](#api-proxy-for-collmex-with-graphql-support)
-  - [Table of Contents](#table-of-contents)
-  - [Important Notes](#important-notes)
-  - [Features](#features)
-    - [Query](#query)
-      - [Type "Product"](#type-product)
-    - [Mutation](#mutation)
-  - [Dependencies](#dependencies)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-  - [Tools](#tools)
-    - [GraphiQL](#graphiql)
-    - [Altair GraphQL client](#altair-graphql-client)
+- [Important Notes](#important-notes)
+- [Features](#features)
+  - [Query](#query)
+    - [Type "Product"](#type-product)
+  - [Mutation](#mutation)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Tools](#tools)
+  - [GraphiQL](#graphiql)
+  - [Altair GraphQL client](#altair-graphql-client)
+- [Roadmap & Vision](#roadmap--vision)
+- [Collmex API Documentation](#collmex-api-documentation)
+- [Development notes](#development-notes)
 
 ## Important Notes
 This project is in a very early stage of development and is therefore not yet suitable for productive use!
