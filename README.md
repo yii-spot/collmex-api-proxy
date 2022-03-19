@@ -6,7 +6,8 @@ This Symfony Flex "API-only" app provides GraphQL access to the [Collmex API](ht
 - [Important Notes](#important-notes)
 - [Features](#features)
   - [Query](#query)
-    - [Type "Product"](#type-product)
+    - [Type "Delivery" - Collmex "Lieferung"](#type-delivery)
+    - [Type "Product" - Collmex "Produkt"](#type-product)
   - [Mutation](#mutation)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
@@ -31,12 +32,12 @@ Currently there
 ### Query
 
 #### Type "Delivery"
-GraphQL representation of the Collmex Type "Lieferung" with the following nested object types:
+GraphQL representation of the Collmex type "Lieferung" with the following nested object types:
 - Client (Collmex "Firma")
 - DeliveryItem (Subtype for delivery position data)
 
 #### Type "Product"
-GraphQL representation of the Collmex Type "Produkt" with the following nested object types:
+GraphQL representation of the Collmex type "Produkt" with the following nested object types:
 - ProductGroup (Collmex "Produktgruppe")
 - Client (Collmex "Firma")
 - TaxRate (Collmex "Steuerklassifikation")
